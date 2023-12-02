@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class MiCharacterController : MonoBehaviour
@@ -12,7 +11,7 @@ public class MiCharacterController : MonoBehaviour
     private float playerSpeed = 10f;
     private float sprintSpeed = 20f;
     private float jumpHeight = 2.0f;
-    private float gravityValue = -15f;
+    private float gravityValue = -30f;
 
 
     private void Start()
@@ -29,18 +28,12 @@ public class MiCharacterController : MonoBehaviour
             playerVelocity.y = 0f;
         }
 
-
-
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
         float sprinting = Input.GetAxis("Fire3");
 
-
-
-
         Vector3 move;
-
 
         move = transform.forward * vertical + transform.right * horizontal;
 
@@ -59,8 +52,6 @@ public class MiCharacterController : MonoBehaviour
 
         playerVelocity.y += gravityValue * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);
-
-
     }
 
     private void UpdateIsSprinting()

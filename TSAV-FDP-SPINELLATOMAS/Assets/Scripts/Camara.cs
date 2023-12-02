@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Camara1 : MonoBehaviour
+public class Camara : MonoBehaviour
 {
-    float sensX = 200;
-    float sensY = 200;
+    readonly float sensX = 200;
+    readonly float sensY = 200;
 
-    public Transform orientation;
+    public Transform orientation;   
 
     float xRotation;
     float yRotation;
