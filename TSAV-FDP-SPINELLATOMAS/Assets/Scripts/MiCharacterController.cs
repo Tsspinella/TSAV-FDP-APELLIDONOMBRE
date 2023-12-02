@@ -8,8 +8,8 @@ public class MiCharacterController : MonoBehaviour
     private Animator anim;
     private Vector3 playerVelocity;
     private bool groundedPlayer;
-    private float playerSpeed = 10f;
-    private float sprintSpeed = 20f;
+    private float playerSpeed = 3f;
+    private float sprintSpeed = 8f;
     private float jumpHeight = 2.0f;
     private float gravityValue = -30f;
 
